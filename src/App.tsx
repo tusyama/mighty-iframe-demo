@@ -63,17 +63,17 @@ function App() {
     <>
       <div>
         <span className="logo wirex" id="wirexSmall">
-          <MightyWidget partnerId="Wirex" percent="90%">
+          <MightyWidget logoSrc={wirexLogo} partnerId="Wirex" percent="90%">
             <img src={wirexLogo} className="logo" alt="wirex logo" />
           </MightyWidget>
         </span>
         <span className="logo wirex" id="wirex">
-          <MightyWidget partnerId="Wirex">
+          <MightyWidget logoSrc={wirexLogo} partnerId="Wirex">
             <img src={wirexLogo} className="logo" alt="wirex logo" />
           </MightyWidget>
         </span>
         <span className="logo superchain" id="superchain">
-          <MightyWidget partnerId="Superchain" percent="70%">
+          <MightyWidget logoSrc={superChainLogo} partnerId="Superchain" percent="70%">
             <img
               src={superChainLogo}
               className="logo react"
@@ -82,7 +82,7 @@ function App() {
           </MightyWidget>
         </span>
         <span className="logo superchain" id="superchainSmall">
-          <MightyWidget partnerId="Superchain">
+          <MightyWidget logoSrc={superChainLogo} partnerId="Superchain">
             <img
               src={superChainLogo}
               className="logo react"
