@@ -123,7 +123,7 @@ function App() {
         <SizedBox heigth={10} />
         <MightyWidget
           partnerId="Magic_Ball"
-          targetUrl="https://test.mighty.app/stydy/646ceccd9d546b90065bcac0/646cedd19d546b90065bcad8/646cee099d546b90065bcadf"
+          targetUrl="https://test.mighty.study/courses/646ceccd9d546b90065bcac0/646cedd19d546b90065bcad8/646cee099d546b90065bcadf"
           percent="80%"
         >
           <button id="learnButton">Learn react from Mighty</button>
