@@ -1,23 +1,26 @@
-import { useState, version } from "react";
-import wirexLogo from "./assets/wirex.png";
-import superChainLogo from "./assets/superchain.png";
+import { useState, version } from 'react';
+import wirexLogo from './assets/wirex.png';
+import superChainLogo from './assets/superchain.png';
 
-import "./App.css";
-import { SizedBox } from "./sizedBox";
+import './App.css';
+import { SizedBox } from './sizedBox';
 
-import { MightyWidget, MightyPage } from "mighty-iframe";
-import WidgetSetup from "./Constructor";
+import { MightyWidget, MightyPage } from 'mighty-academy-widget';
+import WidgetSetup from './Constructor';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [changedPage, setChangedPage] = useState("constructor");
-  const [secondPageFullscreen, setSecondPageFullscreen] = useState(false);
+  const [changedPage, setChangedPage] = useState('constructor');
+  const [secondPageFullscreen, setSecondPageFullscreen] =
+    useState(false);
 
-  if (changedPage === "second") {
+  if (changedPage === 'second') {
     return (
       <>
-        <button onClick={() => setChangedPage("index")}>main page</button>
-        <button onClick={() => setChangedPage("constructor")}>
+        <button onClick={() => setChangedPage('index')}>
+          main page
+        </button>
+        <button onClick={() => setChangedPage('constructor')}>
           constructor page
         </button>
         <button onClick={() => setSecondPageFullscreen(true)}>
@@ -28,11 +31,11 @@ function App() {
           style={
             secondPageFullscreen
               ? {
-                  position: "fixed",
+                  position: 'fixed',
                   top: 0,
                   left: 0,
-                  width: "100%",
-                  height: "100%",
+                  width: '100%',
+                  height: '100%',
                 }
               : undefined
           }
@@ -48,11 +51,15 @@ function App() {
     );
   }
 
-  if (changedPage === "constructor") {
+  if (changedPage === 'constructor') {
     return (
       <>
-        <button onClick={() => setChangedPage("index")}>main page</button>
-        <button onClick={() => setChangedPage("second")}>second page</button>
+        <button onClick={() => setChangedPage('index')}>
+          main page
+        </button>
+        <button onClick={() => setChangedPage('second')}>
+          second page
+        </button>
 
         <WidgetSetup></WidgetSetup>
       </>
@@ -63,7 +70,11 @@ function App() {
     <>
       <div>
         <span className="logo wirex" id="wirexSmall">
-          <MightyWidget logoSrc={wirexLogo} partnerId="Wirex" percent="90%">
+          <MightyWidget
+            logoSrc={wirexLogo}
+            partnerId="Wirex"
+            percent="90%"
+          >
             <img src={wirexLogo} className="logo" alt="wirex logo" />
           </MightyWidget>
         </span>
@@ -73,7 +84,11 @@ function App() {
           </MightyWidget>
         </span>
         <span className="logo superchain" id="superchain">
-          <MightyWidget logoSrc={superChainLogo} partnerId="Superchain" percent="70%">
+          <MightyWidget
+            logoSrc={superChainLogo}
+            partnerId="Superchain"
+            percent="70%"
+          >
             <img
               src={superChainLogo}
               className="logo react"
@@ -82,7 +97,10 @@ function App() {
           </MightyWidget>
         </span>
         <span className="logo superchain" id="superchainSmall">
-          <MightyWidget logoSrc={superChainLogo} partnerId="Superchain">
+          <MightyWidget
+            logoSrc={superChainLogo}
+            partnerId="Superchain"
+          >
             <img
               src={superChainLogo}
               className="logo react"
@@ -92,8 +110,10 @@ function App() {
         </span>
       </div>
       <h1>Vite + React {version}</h1>
-      <button onClick={() => setChangedPage("second")}>second page</button>
-      <button onClick={() => setChangedPage("constructor")}>
+      <button onClick={() => setChangedPage('second')}>
+        second page
+      </button>
+      <button onClick={() => setChangedPage('constructor')}>
         constructor page
       </button>
       <div className="card">
