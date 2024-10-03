@@ -1,5 +1,5 @@
 import { SizedBox } from "./sizedBox"
-import { MightyWidget } from "mightyiframeintegration"
+import { MightyWidget } from "mighty-academy-widget"
 
 export const NewPage = () => {
     return <div>
