@@ -2,19 +2,17 @@ import { useState } from 'react';
 import { MightyWidget } from 'mighty-academy-widget';
 
 const WidgetSetup = () => {
+  const [partnerId, setPartnerId] = useState('TON1');
   const [url, setUrl] = useState('https://test.mighty.study/TON1');
   const [techStack, setTechStack] = useState('javascript');
   const [mode, setMode] = useState('dark');
   const [size, setSize] = useState(45);
-  const [logoSrc, setLogoSrc] = useState(
-    'https://cryptologos.cc/logos/toncoin-ton-logo.png'
-  );
   const [copySuccess, setCopySuccess] = useState('');
   const [copyScriptSuccess, setCopyScriptSuccess] = useState('');
   const [copyWrapperSuccess, setCopyWrapperSuccess] = useState('');
 
+  const updatePartnerId = (e: any) => setPartnerId(e.target.value);
   const updateUrl = (e: any) => setUrl(e.target.value);
-  const updateLogoSrc = (e: any) => setLogoSrc(e.target.value);
   const updateSize = (e: any) => setSize(e.target.value);
   const updateTechStack = (e: any) => setTechStack(e.target.value);
   const updateMode = (e: any) => setMode(e.target.value);
@@ -34,13 +32,13 @@ const WidgetSetup = () => {
 
   const previewCode =
     techStack === 'react'
-      ? `<MightyWidget\n  partnerId="TON1"\n  targetUrl="${url}"\n  percent="${size}%"\n  theme="${mode}"\n  logoSrc="${logoSrc}"\n >\n   <button>Preview Widget</button>\n </MightyWidget>`
-      : `<mighty-widget\n partnerid="TON1"\n targeturl="${url}"\n percent="${size}%"\n theme="${mode}"\n logoSrc="${logoSrc}"\n >\n  <button>Preview Widget</button>\n</mighty-widget>`;
+      ? `<MightyWidget\n  partnerId="${partnerId}"\n  targetUrl="${url}"\n  percent="${size}%"\n  theme="${mode}"\n >\n   <button>Preview Widget</button>\n </MightyWidget>`
+      : `<mighty-widget\n partnerid="${partnerId}"\n targeturl="${url}"\n percent="${size}%"\n theme="${mode}"\n >\n  <button>Preview Widget</button>\n</mighty-widget>`;
 
   const pagePreviewCode =
     techStack === 'react'
-      ? `<MightyPage\n  partnerId="TON1"\n  targetUrl="${url}"\n  percent="${size}%"\n  theme="${mode}"\n  logoSrc="${logoSrc}"\n />`
-      : `<mighty-page\n partnerid="TON1"\n targeturl="${url}"\n percent="${size}%"\n theme="${mode}"\n logoSrc="${logoSrc}"\n >\n</mighty-page>`;
+      ? `<MightyPage\n  partnerId="${partnerId}"\n  targetUrl="${url}"\n  percent="${size}%"\n  theme="${mode}"\n />`
+      : `<mighty-page\n partnerid="${partnerId}"\n targeturl="${url}"\n percent="${size}%"\n theme="${mode}"\n>\n</mighty-page>`;
 
   const installOrScriptCode =
     techStack === 'react'
@@ -63,6 +61,19 @@ const WidgetSetup = () => {
       <h1>Setup on your website in 5 minutes</h1>
 
       <div className="form-group">
+        <label htmlFor="partnerIdInput">
+          Paste Patner Id (Space name)
+        </label>
+        <input
+          type="text"
+          id="partnerIdInput"
+          value={partnerId}
+          onChange={updatePartnerId}
+          placeholder="https://test.mighty.study/TON1"
+        />
+      </div>
+
+      <div className="form-group">
         <label htmlFor="urlInput">
           Paste link to Space / Course / Lesson URL
         </label>
@@ -71,17 +82,6 @@ const WidgetSetup = () => {
           id="urlInput"
           value={url}
           onChange={updateUrl}
-          placeholder="https://test.mighty.study/TON1"
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="urlInput">Paste your logo URL</label>
-        <input
-          type="text"
-          id="urlInput"
-          value={logoSrc}
-          onChange={updateLogoSrc}
           placeholder="https://test.mighty.study/TON1"
         />
       </div>
@@ -165,7 +165,6 @@ const WidgetSetup = () => {
           targetUrl={url}
           percent={`${size}%`}
           theme={mode}
-          logoSrc={logoSrc}
         >
           <button id="previewButton">Preview Widget</button>
         </MightyWidget>

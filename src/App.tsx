@@ -42,8 +42,6 @@ function App() {
         >
           <MightyPage
             partnerId="Superchain"
-            //@ts-ignore
-            logoSrc={superChainLogo}
             targetUrl="https://test.mighty.study/courses/669a8e515007186b0e7aff9c"
           />
         </div>
@@ -71,7 +69,6 @@ function App() {
       <div>
         <span className="logo wirex" id="wirexSmall">
           <MightyWidget
-            logoSrc={wirexLogo}
             partnerId="Wirex"
             percent="90%"
           >
@@ -79,13 +76,12 @@ function App() {
           </MightyWidget>
         </span>
         <span className="logo wirex" id="wirex">
-          <MightyWidget logoSrc={wirexLogo} partnerId="Wirex">
+          <MightyWidget partnerId="Wirex">
             <img src={wirexLogo} className="logo" alt="wirex logo" />
           </MightyWidget>
         </span>
         <span className="logo superchain" id="superchain">
           <MightyWidget
-            logoSrc={superChainLogo}
             partnerId="Superchain"
             percent="70%"
           >
@@ -98,7 +94,6 @@ function App() {
         </span>
         <span className="logo superchain" id="superchainSmall">
           <MightyWidget
-            logoSrc={superChainLogo}
             partnerId="Superchain"
           >
             <img
