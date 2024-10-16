@@ -161,7 +161,7 @@ const WidgetSetup = () => {
 
       <div className="widget-preview">
         <MightyWidget
-          partnerId="TON1"
+          partnerId={partnerId}
           targetUrl={url}
           percent={`${size}%`}
           theme={mode}
