@@ -4,7 +4,7 @@ import { MightyWidget } from 'mighty-academy-widget';
 const WidgetSetup = () => {
   const [partnerId, setPartnerId] = useState('Mighty');
   const [url, setUrl] = useState(
-    'https://test.mighty.study/courses/645020f8a1aa6fc1ddccdbd7/64502105a1aa6fc1ddccdbdf/64502150a1aa6fc1ddccdbf0'
+    'https://app.mighty.study/courses/645020f8a1aa6fc1ddccdbd7/64502105a1aa6fc1ddccdbdf/64502150a1aa6fc1ddccdbf0'
   );
   const [techStack, setTechStack] = useState('javascript');
   const [mode, setMode] = useState('dark');
@@ -71,7 +71,7 @@ const WidgetSetup = () => {
           id="partnerIdInput"
           value={partnerId}
           onChange={updatePartnerId}
-          placeholder="https://test.mighty.study/Mighty"
+          placeholder="https://app.mighty.study/Mighty"
         />
       </div>
 
@@ -84,7 +84,7 @@ const WidgetSetup = () => {
           id="urlInput"
           value={url}
           onChange={updateUrl}
-          placeholder="https://test.mighty.study/Mighty"
+          placeholder="https://app.mighty.study/Mighty"
         />
       </div>
 
