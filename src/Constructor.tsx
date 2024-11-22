@@ -3,7 +3,7 @@ import { MightyWidget } from 'mighty-academy-widget';
 
 const WidgetSetup = () => {
   const [partnerId, setPartnerId] = useState('Mighty');
-  const [url, setUrl] = useState('https://test.mighty.study/Mighty');
+  const [url, setUrl] = useState('https://app.mighty.study/Mighty');
   const [techStack, setTechStack] = useState('javascript');
   const [mode, setMode] = useState('dark');
   const [size, setSize] = useState(45);
@@ -69,7 +69,7 @@ const WidgetSetup = () => {
           id="partnerIdInput"
           value={partnerId}
           onChange={updatePartnerId}
-          placeholder="https://test.mighty.study/Mighty"
+          placeholder="https://app.mighty.study/Mighty"
         />
       </div>
 
@@ -82,7 +82,7 @@ const WidgetSetup = () => {
           id="urlInput"
           value={url}
           onChange={updateUrl}
-          placeholder="https://test.mighty.study/Mighty"
+          placeholder="https://app.mighty.study/Mighty"
         />
       </div>
 
